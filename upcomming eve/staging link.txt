@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
+
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+details {
+  font-size: 1rem;
+  margin: 1em auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  background: black;/*for sp */
+  border-radius: 1px;
+  position: relative;
+  width: 100%;
+}
+details .summary-title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+details:hover {
+  cursor: pointer;
+}
+details .summary-content {
+  border-top: 1px solid #e2e8f0;
+  cursor: default;
+  padding: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+}
+details summary {
+  list-style: none;
+  padding: 1em;
+}
+details summary:focus {
+  outline: none;
+}
+details summary:hover .summary-chevron-up svg {
+  opacity: 1;
+}
+details .summary-chevron-up svg {
+  opacity: 0.9;
+}
+details .summary-chevron-up,
+details .summary-chevron-down {
+/*this is for change of button*/
+  pointer-events: none;
+  position: absolute;
+  top: 0.75em;
+  right: 1em;
+  background:#fff;
+}
+details .summary-chevron-up svg,
+details .summary-chevron-down svg {
+  display: block;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+.div122  {
+    border: 2px solid lime;
+    width: px;
+    height:250px;
+    overflow: hidden;
+}
+
+
+
+table {
+    width:1990px;
+}
+
+.nav-pills a{
+  color:black;
+  font-size:22px;
+  }
+ .nav-pills a:focus,.nav-pills a:hover {
+    color:black ;
+    text-decoration: underline;
+    background:transparent;
+}
+.nav-pillsa:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+    background-color:;
+}
+
+
+.nav-pills>li.active>a{
+color:#A44BA2; /*active color*/
+     background-color:transparent; 
+}
+
+.nav-pills>li.active>a::after{
+
+ content:"";
+     color:; /*active color*/
+     background-color:#A44BA2; 
+     
+     display:block;
+     width:70%;
+     height:3px;
+     margin-left:1%;
+     margin-top:5%;
+     border:transparent;
+
+
+}
+.nav-pills>li.active>a:focus
+ {
+     color:#A44BA2; /*active color*/
+     background-color:transparent; 
+    
+     }
+
+.nav-pills>li.active>a:hover{
+color:#A44BA2; /*active color*/
+     background-color:transparent; 
+}
+
+/*test*/
+
+ .nav-pills>li.active>a:focus::after {
+     content:"";
+     color:; /*active color*/
+     background-color:#A44BA2; 
+     
+     display:block;
+     width:70%;
+     height:3px;
+     margin-left:1%;
+     margin-top:5%;
+     border:transparent;
+     }
+
+ /*test*/
+nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;/*on hover setup*/
+     background-color: transparent; 
+     font-size:20px;
+}
+ 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: none;
+}
+  
+/* Scrollable */
+
+.scroll{  
+   overflow-x:  scroll;
+    overflow-y: hidden;    
+}
+
+.nav-item .nav-link{
+    color: silver !important ;
+    padding-top: 2px;
+
+}
+.nav-item > .nav-link:hover{
+    background-color: transparent;
+
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color:transparent !important;
+    font: normal normal bold 36px/60px Merriweather;
+    color: #A44BA2 !important;
+    }
+    
+.background .nav-pills .active::after{
+   content: '';
+   width: 55%;
+   height: 5px;
+   background-color: #A44BA2;
+   margin-left: 15px;
+   display:block;
+                       
+}
+.active{
+    margin-top:-10px
+}
+
+.kklo li{
+width:240px;
+height:180px;
+margin:20px;
+border:2px solid lime;
+}
+
+.test_k{
+width:200px;
+height:140px;
+margin:20px;
+border:2px solid red;
+}
+
+.midnev1 .nav-pills{
+    width: 1380px;  
+}
+.summary-title{
+color:#FFFFFF;
+font: normal normal normal 16px/25px Poppins;
+}
+</style>
+
+<body>
+
+<div class="container">
+  <h2>Carousel Example</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <!--li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li-->
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+        
+        <div class="">
+        
+        <details>
+	<summary>
+		<span class="summary-title">SPEAKER 1</span>
+		<div class="summary-chevron-up">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+		</div>
+	</summary>
+
+	<div class="summary-content">NIKI SMOO
+    <!-- THE tag-->
+
+
+<div class="overflow-hidden div122">
+  <table>
+      
+     <div class="midnev1">
+<div class="scroll">
+         
+        <ul class="nav nav-pills kklo"  >
+          <li ><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo  </li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+
+        </ul>
+        
+      </div>
+</div>
+        </table>
+</div>
+
+<!-- THE tag end-->
+    </div>
+	<div class="summary-chevron-down">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+		
+</details>
+
+
+          
+        </div>
+        
+      </div>
+
+      <div class="item">
+        <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+        <div class="">
+          <details>
+	<summary>
+		<span class="summary-title">SPEAKER 2</span>
+		<div class="summary-chevron-up">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+		</div>
+	</summary>
+
+	<div class="summary-content">NIKI SMOO
+    <!-- THE tag-->
+
+
+<div class="overflow-hidden div122">
+  <table>
+      
+     <div class="midnev1">
+<div class="scroll">
+         
+        <ul class="nav nav-pills kklo"  >
+          <li ><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+
+        </ul>
+        
+      </div>
+</div>
+        </table>
+</div>
+
+<!-- THE tag end-->
+    </div>
+	<div class="summary-chevron-down">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+		
+</details>
+
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="ny.jpg" alt="New York" style="width:100%;">
+        <div class="">
+         
+         <details>
+	<summary>
+		<span class="summary-title">SPEAKER 3</span>
+		<div class="summary-chevron-up">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+		</div>
+	</summary>
+
+	<div class="summary-content">NIKI SMOO
+    <!-- THE tag-->
+
+
+<div class="overflow-hidden div122">
+  <table>
+      
+     <div class="midnev1">
+<div class="scroll">
+         
+        <ul class="nav nav-pills kklo"  >
+          <li ><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo  </li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+          <li><h3 class="test_k">hh</h3>oo</li>
+
+        </ul>
+        
+      </div>
+</div>
+        </table>
+</div>
+
+<!-- THE tag end-->
+    </div>
+	<div class="summary-chevron-down">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+		
+</details>
+
+         
+        </div>
+      </div>
+  
+    </div>
+
+  
+   
+  </div>
+</div>
+
+</body>
+</html>
