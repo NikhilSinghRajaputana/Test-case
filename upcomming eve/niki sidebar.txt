@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+#menu {
+  width: 150px;
+  height: 100%;
+  background: #424242;
+  color: white;
+  float: left;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  list-style: none;
+  font-size: 20px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+#menu li:hover {
+  background-color: #90CAF9;
+}
+
+#menu li.active {
+  background-color: #2196F3;
+}
+
+#menu ul li ul {
+  display: none;
+}
+
+#menu ul li.submenu {
+  position: relative
+}
+
+#menu ul li.submenu ul {
+    position: absolute;
+    left: 150px;
+    width: 200px;
+    top: 0;
+    background: #333
+}
+
+#menu ul li.submenu:hover ul {
+  display: inline-block
+}
+</style>
+
+<body>
+<div id="menu">
+  <ul>
+    
+    <li class="submenu">Employee &gt;
+      <ul>
+        <li>Add Employee</li>
+        <li>Employee View</li>
+      </ul>
+    </li>
+    <li>Leave</li>
+    
+      </ul>
+    </li>
+   
+  </ul>
+</div>
+
+    <!-- Wrapper for slides -->
+    
+</body>
+</html>
